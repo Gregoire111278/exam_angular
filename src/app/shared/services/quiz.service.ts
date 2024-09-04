@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -57,5 +57,8 @@ export class QuizService {
     this.playerAnswers = [];
     this.score = 0;
     this.isQuizFinished = false;
+  }
+  getQuestionsByCategory(categoryId: number): Observable<any[]> {
+    return this.http.get<any[]>(`http://localhost:3000/questions?categoryId=${categoryId}`);
   }
 }

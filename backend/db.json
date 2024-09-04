@@ -506,11 +506,11 @@
   "categories": [
     {
       "id": 1,
-      "categoryLabel": "Angular"
+      "name": "Angular"
     },
     {
       "id": 2,
-      "categoryLabel": "React"
+      "name": "React"
     }
   ],
   "users": [

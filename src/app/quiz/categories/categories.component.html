@@ -1,1 +1,8 @@
-<p>categories works!</p>
+<div class="category-search">
+  <input type="text" placeholder="Search categories..." [(ngModel)]="search" />
+  <button (click)="resetFilter()">Reset Filter</button>
+</div>
+
+<div class="category-cards">
+  <app-categories-card *ngFor="let category of filterCategories()" [categorie]="categories" (click)="navigateToQuiz(category.id)"></app-categories-card>
+</div>
